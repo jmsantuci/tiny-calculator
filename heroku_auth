@@ -4,5 +4,5 @@ spawn heroku login
 expect "Email:"
 send "jmsantuci@gmail.com\r"
 expect "Password (typing will be hidden):"
-send "$env(HEROKY_API)\r"
+send "$env(HEROKU_API)\r"
 expect "$ "
