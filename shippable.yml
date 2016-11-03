@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+ - 0.10
+
+env:
+ global:
+  - APP_NAME=devops-jmsantuci
+  - HEROKU_API=ee0cf710-eb7b-4a94-9147-c210c947ccd6
+
+build:
+ ci:
+  - npm install
+  - npm test
+
+ on_sucess:
+  - ./heroku_auth
+  - git push -f https://git.heroku.com/devops-jmsantuci.git master
+
+before_install:
+ - sudo apt-get update
+ - sudo apt-get install expect
+ - which heroku || get -qO https://toolbelt.heroku.com/install-ubuntu.sh | sh
+ - chmod +x heroku_auth
