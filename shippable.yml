@@ -6,7 +6,7 @@ node_js:
 env:
  global:
   - APP_NAME=devops-jmsantuci
-  - HEROKU_API=ee0cf710-eb7b-4a94-9147-c210c947ccd6
+  - HEROKU_API=4593a895-9032-4935-bdfe-9d3bdb4ae3bf
 
 build:
  ci:
